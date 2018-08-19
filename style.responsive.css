@@ -40,8 +40,13 @@
 .responsive .art-content-layout-row, 
 .responsive .art-layout-cell 
 {
-   padding: 0;
    display: block;
+}
+
+.responsive .art-content-layout, 
+.responsive .art-content-layout-row
+{
+   padding: 0;
 }
     
 .responsive .image-caption-wrapper 
@@ -140,13 +145,15 @@
 
 .default-responsive .art-header .art-positioncontrol 
 {
+   display: block !important;
+   position: relative !important;
    top: auto !important;
    right: auto !important;
    bottom: auto !important;
    left: auto !important;
-   width: auto;
-   height: auto;
-   margin: auto;
+   margin: 2% auto !important;
+   width: auto !important;
+   height: auto !important;
 }
 
 .responsive .art-header #art-flash-area
@@ -232,6 +239,8 @@
 .responsive nav.art-nav
 {
    min-width: 1%;
+   margin-right: 1% !important;
+   margin-left: 1% !important;
 }
 
 .responsive .art-nav 
@@ -240,7 +249,6 @@
    padding-right: 0;
    padding-top: 10px;
    padding-bottom: 10px;
-   margin-top: 20px;
 }
  
 /* full width hmenu, instead of inline-block */
@@ -423,14 +431,13 @@
    max-width: none !important;
    margin-right: 1% !important;
    margin-left: 1% !important;
-   margin-top: 1% !important;
 }
 
 #art-resp {
    display: none;
 }
 
-@media all and (max-width: 899px)
+@media all and (max-width: 999px)
 {
     #art-resp, #art-resp-t { display: block; }
     #art-resp-m { display: none; }
@@ -482,98 +489,6 @@
 {
     #art-resp-phone-portrait { display: block; }
 }
-.responsive .art-pageslider 
-{
-   width: auto !important;
-   max-width: none !important;
-   min-height: 100px !important;
-   min-width: 0 !important;
-   text-align: center;
-}
-
-.default-responsive .art-pageslider 
-{
-   height: auto;
-}
-
-.default-responsive .art-pageslider .art-slide-item > *
-{
-   position: relative;
-   text-align: center;
-   -webkit-transform: none !important;
-   -moz-transform: none !important;
-   -o-transform: none !important;
-   -ms-transform: none !important;
-   transform: none !important;
-}
-
-.default-responsive .art-pageslider .art-slide-item > .art-textblock
-{
-   display: none !important;
-}
-
-.default-responsive .art-pageslider .art-logo
-{
-   display: inline-block;
-   margin: auto !important;
-   left: auto;
-   top: auto !important;
-}
-
-.responsive .art-pageslider .art-slidenavigator 
-{
-   position: absolute;
-}
-
-.default-responsive .art-pageslider .art-positioncontrol 
-{
-   top: auto !important;
-   right: auto !important;
-   bottom: auto !important;
-   left: auto !important;
-   width: auto;
-   height: auto;
-   margin: auto;
-}
-
-.responsive .art-pageslider #art-flash-area
-{
-   display: none;
-}
-
-.default-responsive .art-pageslider .art-textblock 
-{
-   position: relative !important;
-   display: block !important;
-   margin: auto !important;
-   left: 0 !important;
-   right: 0 !important;
-   top: auto !important;
-   height: auto !important;
-   width: auto;
-}
-
-.default-responsive .art-pageslider .art-shapes > .art-textblock *
-{
-   text-align: center !important;
-   width: auto !important;
-   height: auto !important;
-   display: block;
-}
-
-.default-responsive .art-pageslider .art-slider .art-textblock *
-{
-   text-align: center !important;
-   width: auto !important;
-   height: auto !important;
-   display: block;
-}
-
-/* For icons like facebook, rss, etc. */
-.responsive .art-pageslider>.art-textblock>div 
-{
-   width: 100%;
-}
 .responsive .art-content-layout, 
 .responsive .art-content-layout-row, 
 .responsive .art-layout-cell 
@@ -598,6 +513,28 @@
    visibility: hidden;
 }
 
+.responsive .responsive-tablet-layout-cell,
+.responsive.responsive-tablet .art-footer .art-content-layout .art-layout-cell 
+{
+   margin: 1%;
+   width: 98% !important;
+   float: left;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.responsive .responsive-layout-row-2 .responsive-tablet-layout-cell,
+.responsive.responsive-tablet .art-footer .art-content-layout .responsive-layout-row-2 .art-layout-cell
+{
+   width: 48% !important;
+}
+
+.responsive .responsive-layout-row-3 .responsive-tablet-layout-cell,
+.responsive.responsive-tablet .art-footer .art-content-layout .responsive-layout-row-3 .art-layout-cell
+{
+   width: 31% !important;
+}
 .responsive .art-post
 {
    border-radius: 0;
@@ -605,21 +542,6 @@
 
 .responsive .art-footer-inner
 {
-   width: auto;
-   padding: 2% !important;
-}
-
-.responsive .responsive-tablet-layout-cell 
-{
-   width: 50% !important;
-   float: left;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-}
-
-.responsive .responsive-layout-row-3 .responsive-tablet-layout-cell 
-{
-   width: 33.33% !important;
+   min-width: 0;
 }
 

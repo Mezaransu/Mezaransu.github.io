@@ -183,7 +183,7 @@ var responsiveImages = (function ($) {
             img.css("width", newWidth).css("max-width", newMaxWidth).css("height", newHeight);
         });
     };
-})(jQuery);
+})(jQuery); 
 
 var responsiveVideos = (function ($) {
     "use strict";
@@ -191,7 +191,8 @@ var responsiveVideos = (function ($) {
         $("iframe[width],object[width],embed[width]").each(function () {
             var obj = $(this);
             if ((obj.is('[width]') && obj.attr("width").indexOf("%") !== -1) ||
-                (obj.is('[class]') && obj.attr("class").indexOf("twitter") !== -1))
+                (obj.is('[class]') && obj.attr("class").indexOf("twitter") !== -1) ||
+                (obj.id && obj.id.indexOf("google") !== -1))
                 return;
             var container = obj.parent(".art-responsive-embed");
             if (responsiveDesign.isResponsive) {
@@ -409,7 +410,6 @@ jQuery(window).bind("responsive", (function ($) {
             });
         } else {
             $(window).trigger("responsiveResize.header");
-            $(window).trigger("resize");
             $(window).off("responsiveResize.header");
         }
     };
@@ -424,39 +424,6 @@ jQuery(window).bind("responsiveResize", (function ($) {
 })(jQuery));
 
 
-var menuInHeader;
-var menuInHeaderHack;
-var responsiveNav = (function ($) {
-    "use strict";
-    return function (responsiveDesign) {
-        var header = $(".art-header");
-        var nav = $('.art-nav');
-
-        if (typeof menuInHeader === 'undefined') {
-            nav = $('.art-header .art-nav');
-            menuInHeader = nav.length !== 0;
-            menuInHeaderHack = false;
-        }
-        
-        if (!menuInHeader) return;
-        
-        if (responsiveDesign.isResponsive) {
-            if (menuInHeaderHack) return;
-            menuInHeaderHack = true;
-            nav.insertAfter(header);
-        } else {
-            if (!menuInHeaderHack) return;
-            menuInHeaderHack = false;
-
-            header.append(nav);
-        }
-    };
-})(jQuery);
-
-jQuery(window).bind("responsivePage", function (event, responsiveDesign) {
-    "use strict";
-    responsiveNav(responsiveDesign);
-});
 
 
 jQuery(function ($) {
@@ -495,7 +462,7 @@ jQuery(function ($) {
 
 
 jQuery(function($) {
-    $("<a href=\"#\" class=\"art-menu-btn\"><span></span><span></span><span></span></a>").insertBefore(".art-hmenu").click(function(e) {
+    $('<a href=\"#\" class=\"art-menu-btn\"><span></span><span></span><span></span></a>').insertBefore(".art-hmenu").click(function(e) {
         var menu = $(this).next();
         if (menu.is(":visible")) {
             menu.slideUp("fast", function() {
@@ -516,11 +483,12 @@ var responsiveLayoutCell = (function ($) {
         $(".art-content .art-content-layout-row,.art-footer .art-content-layout-row").each(function () {
             var row = $(this);
             var rowChildren = row.children(".art-layout-cell");
-            if (rowChildren.length > 1) {
+            if (rowChildren.length > 0) {
                 var c;
-                row.removeClass("responsive-layout-row-2").removeClass("responsive-layout-row-3");
+                row.removeClass("responsive-layout-row-2").removeClass("responsive-layout-row-3").removeClass("responsive-layout-row-1");
                 if (rowChildren.length === 1) {
                     c = 1;
+                    row.addClass("responsive-layout-row-1");
                 } else if (rowChildren.length % 2 === 0) {
                     var c = 2;
                     row.addClass("responsive-layout-row-2");
@@ -528,7 +496,7 @@ var responsiveLayoutCell = (function ($) {
                     var c = 3;
                     row.addClass("responsive-layout-row-3");
                 }
-                if (c > 1 && responsiveDesign.isTablet) {
+                if (c > 0 && responsiveDesign.isTablet) {
                     rowChildren.addClass("responsive-tablet-layout-cell").each(function (i) {
                         if ((i + 1) % c === 0) {
                             $(this).after("<div class=\"cleared responsive-cleared\">");
@@ -545,6 +513,7 @@ var responsiveLayoutCell = (function ($) {
 
 jQuery(window).bind("responsive", function (event, responsiveDesign) {
     "use strict";
+
     responsiveLayoutCell(responsiveDesign);
 });
 
