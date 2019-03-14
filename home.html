@@ -89,8 +89,8 @@
 			{
 				var flashvars = 
 				{
-					system : 'sega',
-					url : '/roms/Flappy Bird (PD) v1.0.gen'
+					system : 'gbc',
+					url : '/roms/RX2.gbc'
 				};
 				var params = {};
 				var attributes = {};
@@ -99,7 +99,7 @@
 				params.allowFullScreen = 'true';
 				params.allowFullScreenInteractive = 'true';
 				
-				swfobject.embedSWF('flash/Nesbox.swf', 'emulator', '640', '480', '11.2.0', 'flash/expressInstall.swf', flashvars, params, attributes);
+				swfobject.embedSWF('emu/Nesbox.swf', 'emulator', '640', '480', '11.2.0', 'flash/expressInstall.swf', flashvars, params, attributes);
 			}
 		}
 		
