@@ -1653,21 +1653,6 @@ pre
    margin: 0;
 }
 
-.art-postmetadataheader
-{
-   background: #D0E6C6;
-   background: rgba(208, 230, 198, 0.5);
-   -webkit-border-radius:10px;
-   -moz-border-radius:10px;
-   border-radius:10px;
-   border:1px solid #E0E0E0;
-   margin:0 auto;
-   position:relative;
-   z-index:1;
-   padding: 1px;
-   margin-bottom: 5px;
-}
-
 .art-postheader
 {
    color: #000000;
@@ -1698,7 +1683,7 @@ pre
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    text-align: left;
-   color: #3E672D;
+   color: #416A2F;
 }
 
 .art-postheader a:visited, .art-postheader a.visited
@@ -1706,7 +1691,7 @@ pre
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    text-align: left;
-   color: #4A4A4A;
+   color: #4D4D4D;
 }
 
 .art-postheader a:hover,  .art-postheader a.hovered
@@ -1714,65 +1699,7 @@ pre
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    text-align: left;
-   color: #5F9C44;
-}
-
-.art-postheadericons,
-.art-postheadericons a,
-.art-postheadericons a:link,
-.art-postheadericons a:visited,
-.art-postheadericons a:hover
-{
-   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
-   color: #333333;
-}
-
-.art-postheadericons
-{
-   padding: 1px;
-   margin: 0 0 0 10px;
-}
-
-.art-postheadericons a, .art-postheadericons a:link
-{
-   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
-   text-decoration: none;
-   color: #416A2F;
-}
-
-.art-postheadericons a:visited, .art-postheadericons a.visited
-{
-   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
-   font-weight: normal;
-   font-style: italic;
-   text-decoration: none;
-   color: #416A2F;
-}
-
-.art-postheadericons a:hover, .art-postheadericons a.hover
-{
-   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
-   font-weight: normal;
-   font-style: italic;
-   text-decoration: underline;
-   color: #162310;
-}
-
-.art-postemailicon:before
-{
-   content:url('images/postemailicon.png');
-   margin-right:6px;
-   position:relative;
-   display:inline-block;
-   vertical-align:middle;
-   font-size:0;
-   line-height:0;
-   bottom: auto;
-}
-.opera .art-postemailicon:before
-{
-   /* Vertical-align:middle in Opera doesn't need additional offset */
-    bottom: 0;
+   color: #61A046;
 }
 
 .art-postcontent ul>li:before,  .art-post ul>li:before,  .art-textblock ul>li:before
