@@ -44,7 +44,7 @@
                                 <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout">
     <div class="art-content-layout-row">
     <div class="art-layout-cell" style="width: 100%" >
-        <p>在这里会展示一些测试版游戏，</p><p>虽然意义不大。</p>
+        <p>在这里会展示一些测试版游戏，</p><p>虽然意义不大。</p><p>（需要运行FLASH）</p>
     </div>
     </div>
 </div>
@@ -65,41 +65,41 @@
          <script src="./src/js/swfobject.js" type="text/javascript"></script>
          
          <script type="text/javascript">
-                                
-                                	var resizeOwnEmulator = function(width, height)
-                                	{
-                                		var emulator = $('#emulator');
-                                		emulator.css('width', width);
-                                		emulator.css('height', height);
-                                	}
-                                
-                                	$(function()
-                                	{
-                                		function embed()
-                                		{
-                                			var emulator = $('#emulator');
-                                			if(emulator)
-                                			{
-                                				var flashvars = 
-                                				{
-                                					system : 'gb',
-                                					url : '/games/game.bin'
-                                				};
-                                				var params = {};
-                                				var attributes = {};
-                                				
-                                				params.allowscriptaccess = 'sameDomain';
-                                				params.allowFullScreen = 'true';
-                                				params.allowFullScreenInteractive = 'true';
-                                				
-                                				swfobject.embedSWF('bin/Nesbox.swf', 'emulator', '640', '480', '11.2.0', 'bin/expressInstall.swf', flashvars, params, attributes);
-                                			}
-                                		}
-                                		
-                                		embed();
-                                	});
-                                	
-                                </script>
+                                        
+                                        	var resizeOwnEmulator = function(width, height)
+                                        	{
+                                        		var emulator = $('#emulator');
+                                        		emulator.css('width', width);
+                                        		emulator.css('height', height);
+                                        	}
+                                        
+                                        	$(function()
+                                        	{
+                                        		function embed()
+                                        		{
+                                        			var emulator = $('#emulator');
+                                        			if(emulator)
+                                        			{
+                                        				var flashvars = 
+                                        				{
+                                        					system : 'gb',
+                                        					url : '/games/game.bin'
+                                        				};
+                                        				var params = {};
+                                        				var attributes = {};
+                                        				
+                                        				params.allowscriptaccess = 'sameDomain';
+                                        				params.allowFullScreen = 'true';
+                                        				params.allowFullScreenInteractive = 'true';
+                                        				
+                                        				swfobject.embedSWF('bin/Nesbox.swf', 'emulator', '640', '480', '11.2.0', 'bin/expressInstall.swf', flashvars, params, attributes);
+                                        			}
+                                        		}
+                                        		
+                                        		embed();
+                                        	});
+                                        	
+                                        </script>
         <br><br>
     </div>
     </div>
@@ -114,7 +114,7 @@
 <div class="art-content-layout">
     <div class="art-content-layout-row">
     <div class="art-layout-cell layout-item-0" style="width: 100%">
-        <p>Copyright © 2017-2019, DMG Team by Mezaransu</p>
+        <p>@ 2017-2020 DMG Team</p>
     </div>
     </div>
 </div>
